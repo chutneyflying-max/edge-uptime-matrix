@@ -1,0 +1,12 @@
+{
+  "name": "edge-uptime-matrix",
+  "version": "1.0.0",
+  "description": "Global edge network uptime and TCP handshake telemetry matrix",
+  "type": "module",
+  "scripts": {
+    "start": "node src/evaluator.js"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
