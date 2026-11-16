@@ -2,16 +2,16 @@ name: Edge Uptime Matrix Pulse
 
 on:
   schedule:
-    # Staggered offset schedule (runs at minute :12, :27, :42, :57)
+    # Staggered offset schedule
     - cron: '12,27,42,57 * * * *'
   workflow_dispatch:
 
 concurrency:
   group: edge-uptime-pulse
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  uptime:
+  audit:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
