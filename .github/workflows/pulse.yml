@@ -2,8 +2,11 @@ name: Edge Uptime Matrix Pulse
 
 on:
   schedule:
-    # Staggered offset schedule
-    - cron: '12,27,42,57 * * * *'
+    # Staggered offset schedule (independent cron registrations to prevent single-line queue drops)
+    - cron: '12 * * * *'
+    - cron: '27 * * * *'
+    - cron: '42 * * * *'
+    - cron: '57 * * * *'
   workflow_dispatch:
 
 concurrency:
